@@ -1,0 +1,918 @@
+{
+	"info": {
+		"_postman_id": "5ac05419-ddc8-4faa-adca-a532a02d3971",
+		"name": "rexra-project Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34657000"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mizan\",\r\n    \"email\": \"mizanadearfani16@gmail.com\",\r\n    \"password\": \"gg12345\",\r\n    \"confirmPassword\": \"gg12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/auth/register",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"rangga\",\r\n    \"email\": \"testemail@gmail.com\",\r\n    \"password\": \"gg12345\",\r\n    \"confirmPassword\": \"gg12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-l7cAUZChz/2U8jppIfPwKIHV7PI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 05:42:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"User account created successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = res.json();\r",
+									"pm.environment.set(\"token\", jsonData.token); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mizanadearfani16@gmail.com\",\r\n    \"password\": \"mizan123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"testemail@gmail.com\",\r\n    \"password\": \"gg12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-erH2nZWUGq4RkL7+U+Y0+/D8p2M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 06:17:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"User login successfully.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxODQzMjIyMywiZXhwIjoxNzE4NDM1ODIzfQ.efayOPD-Kbp1nPWMkRz0OFY_AjF_WXnsUOYib2RUV0o\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"testemail@gmail.com\",\r\n    \"password\": \"gg123435\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-e3k3k98OHYl3nN6Q3tlKyFgk3Vg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 05:42:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"Password is invalid.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Machine Learning",
+			"item": [
+				{
+					"name": "Rekomendasi [Python]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "penyelenggara",
+									"value": "Institut Teknologi Sepuluh Nopember",
+									"type": "text"
+								},
+								{
+									"key": "preference",
+									"value": "Dalam Kampus",
+									"type": "text"
+								},
+								{
+									"key": "user_preference",
+									"value": "UKM",
+									"type": "text"
+								},
+								{
+									"key": "skills",
+									"value": "voli",
+									"type": "text"
+								},
+								{
+									"key": "durasi",
+									"value": "1 tahun",
+									"type": "text"
+								},
+								{
+									"key": "cv_file",
+									"type": "file",
+									"src": "/C:/Users/muham/Downloads/SERTIFIKAT AIPT A UPNVJT 2021-2026-compressed.pdf"
+								},
+								{
+									"key": "past_activities",
+									"value": "voli",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"recommend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rekomendasi [Backend]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTcxODcxNjE2OSwiZXhwIjoxNzE4NzE5NzY5fQ.kinN-kyoID9KTGtnKeM9RhMKEar_93K-A5iqVRoo2GY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "penyelenggara",
+									"value": "Institut Teknologi Sepuluh Nopember",
+									"type": "text"
+								},
+								{
+									"key": "preference",
+									"value": "Dalam Kampus",
+									"type": "text"
+								},
+								{
+									"key": "user_preference",
+									"value": "UKM",
+									"type": "text"
+								},
+								{
+									"key": "skills",
+									"value": "pecinta alam",
+									"type": "text"
+								},
+								{
+									"key": "durasi",
+									"value": "1 tahun",
+									"type": "text"
+								},
+								{
+									"key": "cv_file",
+									"type": "file",
+									"src": "/C:/Users/muham/Downloads/SERTIFIKAT AIPT A UPNVJT 2021-2026-compressed.pdf",
+									"disabled": true
+								},
+								{
+									"key": "past_activities",
+									"value": "pecinta alam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/recommendations",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"recommendations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recommendation Results",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/recommendations",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"recommendations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/activities/categories",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/activities/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"activities",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9e-tfsy8hPx1k0/hOw2u9NxYDhhsuw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 06:15:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Activity data retrieved successfully.\",\n    \"data\": [\n        {\n            \"kategori\": \"Kegiatan Umum\"\n        },\n        {\n            \"kategori\": \"Kegiatan Intra Kampus\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Activities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/activities?tipe=Kegiatan Umum&lokasi=Surabaya",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"activities"
+							],
+							"query": [
+								{
+									"key": "tipe",
+									"value": "Kegiatan Umum"
+								},
+								{
+									"key": "lokasi",
+									"value": "Surabaya"
+								},
+								{
+									"key": "jenis",
+									"value": "Studi Independen",
+									"disabled": true
+								},
+								{
+									"key": "nama",
+									"value": "Supply, Budget & Operations Intern",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/activities/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"activities",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9e-tfsy8hPx1k0/hOw2u9NxYDhhsuw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 06:15:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Activity data retrieved successfully.\",\n    \"data\": [\n        {\n            \"kategori\": \"Kegiatan Umum\"\n        },\n        {\n            \"kategori\": \"Kegiatan Intra Kampus\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Activity By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.appapi/v1/activities/:idActivity",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"appapi"
+							],
+							"path": [
+								"v1",
+								"activities",
+								":idActivity"
+							],
+							"variable": [
+								{
+									"key": "idActivity",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/activities/:idActivity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"activities",
+										":idActivity"
+									],
+									"variable": [
+										{
+											"key": "idActivity",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1417"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"589-RZKSMb/Jxgp3N/ikn+sEOABB+Cc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jun 2024 07:34:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Activity data retrieved successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"kategori\": \"Kegiatan Umum\",\n        \"subKategori\": \"Organisasi Luar Kampus\",\n        \"penyelenggara\": \"AIESEC\",\n        \"posisi\": \"Staff\",\n        \"deskripsi\": \"AIESEC, organisasi kepemimpinan pemuda global, menawarkan berbagai kegiatan menarik dan menantang untuk mengembangkan diri dan berkontribusi pada masyarakat. Mulai dari mengikuti program pertukaran pelajar di luar negeri, mengembangkan skill kepemimpinan melalui konferensi dan pelatihan, hingga terlibat dalam proyek-proyek kewirausahaan sosial dan advokasi, AIESEC membuka peluang bagi para anggotanya untuk mengasah berbagai skill seperti kepemimpinan, kerja sama tim, komunikasi, pemecahan masalah, dan lainnya. Bergabunglah dengan AIESEC dan ciptakan perubahan positif di dunia!\",\n        \"durasi\": \"1 tahun\",\n        \"tanggalPendaftaran\": \"10-26 Agustus 2024\",\n        \"link\": \"https://aiesec.or.id/join-aiesec/\",\n        \"cp\": \"6281333553871\",\n        \"jenisKontak\": \"Whatsapp\",\n        \"lokasi\": \"Surabaya\",\n        \"persyaratan\": [\n            \"- Mahasiswa D3/S1\",\n            \"- Mahasiswa angkatan 2021-2023\",\n            \"- Berusia 17-22 tahun\",\n            \"- Memiliki kesadaran tentang SDGs\",\n            \"- Leadership enthusiasts\",\n            \"- Ingin keluar dari comfort zone\"\n        ],\n        \"skill\": [\n            \"- Strategic skill\",\n            \"- Analytical skill\",\n            \"- Komunikasi serta kerjasama dengan AIESEC secara global yang\",\n            \"menciptakan adanya kegiatan cross-cultural\",\n            \"- Teamwork\"\n        ],\n        \"createdAt\": \"2024-06-15T05:41:25.310Z\",\n        \"updatedAt\": \"2024-06-15T05:41:25.310Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rangga 2\",\r\n    \"email\": \"rangga2@gmail.com\",\r\n    \"username\": \"ranggajaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Profile Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/muham/Downloads/3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://backend-rextra-m4aizr3wda-et.a.run.app/api/v1/users/profile-image",
+							"protocol": "https",
+							"host": [
+								"backend-rextra-m4aizr3wda-et",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
